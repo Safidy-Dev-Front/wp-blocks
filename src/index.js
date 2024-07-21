@@ -42,6 +42,18 @@ registerBlockType( metadata.name, {
 			type: 'string',
 			source: 'html',
 			selector: 'p'
+		},
+		bgImage:{
+			type: 'string',
+			default: 'null'
+		}, 
+		colorOverelay: {
+			type: 'string',
+			default: 'black'
+		},
+		opacityOverelay: {
+			type: 'number', 
+			default: 0.3
 		}
 	},
 	/**

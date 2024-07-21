@@ -5,8 +5,16 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-wp-blocs-new {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wrapper-block-new-wp {
+	position: relative;
+	.safidi-overelay{
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	.content{
+		position: relative;
+	}
 }

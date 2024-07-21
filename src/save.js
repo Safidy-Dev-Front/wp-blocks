@@ -16,10 +16,23 @@ import { useBlockProps  , RichText} from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({attributes}) {
-	const {title , content , titleColor} = attributes;
-	return <div className='wrapper-block-new-wp'>
-				<h2 style={{color: titleColor}}>{title}</h2>
-				<RichText.Content  tagName='p' value={content}/>
+	const { title ,titleColor , content , bgImage , colorOverelay , opacityOverelay} = attributes;
+	return <div className='wrapper-block-new-wp'
+				style={{
+					backgroundImage: `url(${bgImage})`,
+					backgroundSize: 'cover',
+					backgroundPosition: 'center', 
+					backgroundRepeat: 'no-repeat'
+				}}>
+				<div className='safidi-overelay' 
+				style={{
+					backgroundColor: `${colorOverelay}`,
+					opacity: opacityOverelay
+				}}></div>
+				<div className='content'>
+					<h2 style={{color: titleColor}}>{title}</h2>
+					<RichText.Content  tagName='p' value={content}/>
+				</div>
 			</div>
 	
 }

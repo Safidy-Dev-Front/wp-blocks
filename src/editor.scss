@@ -4,6 +4,13 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-wp-blocs-new {
-	border: 1px dotted #f00;
+.safidi-container-block {
+	position: relative;
+	.safidi-overelay{
+		top: 0;
+		left: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
 }
